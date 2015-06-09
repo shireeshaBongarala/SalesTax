@@ -10,7 +10,7 @@ public class SalesTaxTest {
     public void toGetTheTotalCostOfItemIfABook() {
         Item item = new Item("1 book at 12.49");
 
-        String actualBill = item.getTotalCost();
+        String actualBill = item.displayOutput();
 
         assertThat(actualBill,is("1 book: 12.49"));
     }
@@ -19,7 +19,7 @@ public class SalesTaxTest {
     public void toGetTheDifferentTotalCostOfBooks() {
         Item item = new Item("1 book at 12.00");
 
-        String actualBill = item.getTotalCost();
+        String actualBill = item.displayOutput();
 
         assertThat(actualBill,is("1 book: 12.00"));
 
@@ -28,10 +28,18 @@ public class SalesTaxTest {
     public void toGetTotalCostOfAMusicCD() {
         Item item = new Item("1 music CD at 14.99");
 
-        String actualBill = item.getTotalCost();
+        String actualBill = item.displayOutput();
 
         assertThat(actualBill,is("1 music CD: 16.49"));
     }
+    @Test
+    public void toGetTotalCostOfAChocolateBar() {
+        Item item = new Item("1 chocolate bar at 0.85");
 
+        String actualBill = item.displayOutput();
+
+        assertThat(actualBill,is("1 chocolate bar: 0.85"));
 
 }
+}
+
