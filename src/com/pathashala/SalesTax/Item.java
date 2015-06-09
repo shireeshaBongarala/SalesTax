@@ -14,11 +14,7 @@ public class Item {
         String strArray[] = item.split(" ");
         String answer = null;
         quantity = Integer.parseInt(strArray[0]);
-
-        if(strArray[1].equals("book")) {
-            answer = "1 book: 12.49";
-        }
-
+        answer =strArray[0]+ " " + strArray[1]+": "+strArray[strArray.length-1];
         return answer;
     }
 }
