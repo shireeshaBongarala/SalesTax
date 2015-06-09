@@ -24,4 +24,14 @@ public class SalesTaxTest {
         assertThat(actualBill,is("1 book: 12.00"));
 
     }
+    @Test
+    public void toGetTotalCostOfAMusicCD() {
+        Item item = new Item("1 music CD at 14.99");
+
+        String actualBill = item.getTotalCost();
+
+        assertThat(actualBill,is("1 music CD: 16.49"));
+    }
+
+
 }
